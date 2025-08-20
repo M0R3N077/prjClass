@@ -12,7 +12,7 @@ export default function App() {
 
   // Função que pega uma frase da API
   const fetchQuote = async () => {
-    const res = await fetch("https://api.adviceslip.com/advice");
+   const res = await fetch(`https://api.adviceslip.com/advice?${Date.now()}`);
     const data = await res.json();
 
     // Aqui já dá para trocar o texto para português com tradutor simples (exemplo)
