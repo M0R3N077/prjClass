@@ -1,14 +1,17 @@
-interface QuoteProps {
+//Tipando as minhas props
+interface QuoteCardProps {
   content: string;
-  author: string;
 }
 
-export default function QuoteCard({ content, author }: QuoteProps) {
+
+//Parâmetro do meu componente (props)
+export default function QuoteCard({ content}: QuoteCardProps) {
   return (
-    <div className="bg-white shadow-md rounded-2xl p-6 mb-4 max-w-md text-center">
-      <p className="text-lg italic mb-2">"{content}"</p>
-      <p className="text-sm text-gray-600">- {author}</p>
+    <div className="bg-white max-w-lg text-center p-6 mb-6 rounded-2xl shadow-xl border border-gray-200">
+      <p className="text-lg font-medium text-gray-700 leading-relaxed italic">
+        "{content}"
+      
+      </p>
     </div>
   );
 }
-    
